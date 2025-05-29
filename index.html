@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your source for the latest news and updates">
+  <title>News Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Breaking News Banner -->
+  <div class="breaking-news-container">
+    <div class="breaking-news-label">Breaking News</div>
+    <div class="breaking-news-content" id="breaking-news-content">
+      <span class="breaking-news-item">Major technology breakthrough announced today</span>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h1>News Portal</h1>
+    </div>
+    <nav>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Politics</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Technology</a></li>
+      </ul>
+    </nav>
+    <div class="user-section">
+      <button id="login-button" class="login-button"><i class="fas fa-user"></i> Login</button>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search news..." aria-label="Search news">
+        <button id="search-button" aria-label="Search"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <!-- Featured Article -->
+    <section class="featured-article">
+      <div class="article-image">
+        <img src="https://filmfare.wwmindia.com/content/2025/jan/shraddhakapooradityaroykapur011736352550.jpg" alt="Featured Article Image">
+      </div>
+      <div class="article-content">
+        <span class="article-category">World News</span>
+        <h2>Aditya Roy Kapur and Shraddha Kapoor in Mohit Suri's next: Exclusive</h2>
+        <div class="article-meta">
+          <span class="article-author"><i class="fas fa-user"></i> Nikhil kushwaha</span>
+          <span class="article-date"><i class="fas fa-calendar"></i> April 4, 2025</span>
+        </div>
+        <p class="article-description">Fans are going to be delighted to know that Aditya Roy Kapur and Shraddha Kapoor are coming together in a new film.</p>
+        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- News Categories Section -->
+    <section class="news-categories">
+      <h2>Latest News</h2>
+      <div class="category-buttons">
+        <button class="category-button active" data-category="all">All</button>
+        <button class="category-button" data-category="politics">Politics</button>
+        <button class="category-button" data-category="sports">Sports</button>
+        <button class="category-button" data-category="entertainment">Entertainment</button>
+        <button class="category-button" data-category="technology">Technology</button>
+      </div>
+      <div class="articles-grid" id="articles-grid">
+        <!-- Article Cards will be dynamically loaded here using JavaScript -->
+        <div class="loading-indicator" id="loading-indicator">
+          <i class="fas fa-spinner fa-spin"></i> Loading articles...
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter-section">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter to receive the latest news directly in your inbox.</p>
+      <form id="newsletter-form" class="newsletter-form">
+        <input type="email" id="email-input" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Article Comments Section -->
+    <section class="comments-section">
+      <h2>Comments</h2>
+      <div class="comments-list">
+        <div class="comment">
+          <div class="comment-header">
+            <p class="comment-author"><i class="fas fa-user-circle"></i> John Doe</p>
+            <span class="comment-date">April 1, 2025</span>
+          </div>
+          <p class="comment-text">This is a great article! Thanks for sharing.</p>
+        </div>
+        <!-- More comments will be dynamically loaded here -->
+      </div>
+      <form id="comment-form">
+        <textarea id="comment-input" placeholder="Add a comment..." required aria-label="Add a comment"></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>News Portal is your source for timely and accurate news across various categories.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-media">
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 News Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <button type="submit" class="login-submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="register-link">Register</a></p>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="script.js"></script>
+</body>
+</html>
